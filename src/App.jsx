@@ -31,9 +31,18 @@ const App = () => {
               </div>
             }
           />
+          <Route
+            path="/works"
+            element={
+              <div>
+                <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+                  <Works />
+                </div>
+                <Tech /> {/* About component is placed right below Hero */}
+              </div>
+            }
+          />
           <Route path="/experience" element={<Experience />} />
-          <Route path="/tech" element={<Tech />} />
-          <Route path="/works" element={<Works />} />
           <Route path="/feedbacks" element={<Feedbacks />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
