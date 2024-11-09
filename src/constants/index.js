@@ -184,9 +184,9 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Dynamic Algorithm Visualizer",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Developed an interactive tool for visualizing different algorithms like sorting, graph traversal and dynamic programming, using React for front-end development and Tailwind CSS for styling",
     tags: [
       {
         name: "react",
@@ -205,9 +205,9 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Job IT",
+    name: "3D Web Portfolio",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Engineered an interactive 3D web portfolio, leveraging Three.js, Framer Motion and Tailwind CSS to showcase professional work with rich, engaging visuals that enhances user engagement",
     tags: [
       {
         name: "react",
@@ -226,9 +226,9 @@ const projects = [
     source_code_link: "https://github.com/",
   },
   {
-    name: "Trip Guide",
+    name: "Big Data Analysis",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "Developed a comprehensive data pipeline to clean and analyze over 80 million tuples from the MyAnimeList dataset using PostgreSQL and MongoDB.",
     tags: [
       {
         name: "nextjs",
