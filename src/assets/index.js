@@ -27,6 +27,7 @@ import starbucks from "./company/starbucks.png";
 import vi from "./company/vector_infotech.png";
 import oyen from "./company/oyen.png";
 import digiraptor from "./company/digiraptor.png";
+import jofan from "./testimonials/jofan_pic.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -63,4 +64,5 @@ export {
   oyen,
   vi,
   digiraptor,
+  jofan,
 };
