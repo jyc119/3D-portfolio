@@ -1,13 +1,27 @@
 import React, { useEffect, useState } from "react";
+import fileDownload from "js-file-download";
 import { Link } from "react-router-dom";
 
 import { styles } from "../styles";
 import { navLinks } from "../constants";
-import { logo, menu, close } from "../assets";
+import { logo, menu, close, resume } from "../assets";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
+
+  const downloadResume = () => {
+    const resumeUrl = resume;
+
+    fetch(resumeUrl)
+      .then((response) => response.blob())
+      .then((blob) => {
+        fileDownload(blob, "Jordan_Chin_Resume.pdf");
+      })
+      .catch((error) => {
+        console.error("Error downloading the resume:", error);
+      });
+  };
 
   return (
     <nav
@@ -22,7 +36,6 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}
         >
-          {/* //logo change later!! logo.com */}
           <img src={logo} alt="logo" className="w-9 h-9 object-contain" />
           <p className="text-white text-[18px] font-bold cursor-pointer flex">
             Jordan &nbsp;
@@ -38,9 +51,15 @@ const Navbar = () => {
               } hover:text-white text-[18px] font-medium cursor-pointer`}
               onClick={() => setActive(link.title)}
             >
-              <a href={`${link.id}`}>{link.title}</a>
+              <Link to={`${link.id}`}>{link.title}</Link>
             </li>
           ))}
+          <button
+            onClick={downloadResume}
+            className="text-secondary text-[18px] font-medium cursor-pointer"
+          >
+            Resume
+          </button>
         </ul>
 
         <div className="sm:hidden flex flex-1 justify-end items-center">
@@ -70,6 +89,7 @@ const Navbar = () => {
                   <a href={`${link.id}`}>{link.title}</a>
                 </li>
               ))}
+              <button onClick={downloadResume}>Resume</button>
             </ul>
           </div>
         </div>

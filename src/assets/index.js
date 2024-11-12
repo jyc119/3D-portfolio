@@ -33,6 +33,8 @@ import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
+import resume from "./JordanChin-Res.pdf";
+
 export {
   logo,
   backend,
@@ -65,4 +67,5 @@ export {
   vi,
   digiraptor,
   jofan,
+  resume,
 };
