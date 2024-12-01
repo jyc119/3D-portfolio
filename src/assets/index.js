@@ -34,6 +34,7 @@ import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
 import resume from "./JordanChin-Res.pdf";
+import pfp from "./jordan_prof.jpg";
 
 export {
   logo,
@@ -68,4 +69,5 @@ export {
   digiraptor,
   jofan,
   resume,
+  pfp,
 };

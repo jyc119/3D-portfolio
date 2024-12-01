@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { services } from "../constants";
 import { SectionWrapper } from "../hoc";
+import { pfp } from "../assets";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const ServiceCard = ({ index, title, icon }) => {
@@ -40,21 +41,53 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
-      </motion.div>
+      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 bg-gray-100">
+        {/* Text Section */}
+        <motion.div
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="md:w-1/2 flex flex-col text-left"
+        >
+          <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            Hey! I'm Jordan Chin
+          </h1>
+          <p className="text-gray-700 mb-6 leading-7">
+            Hi there! I’m Jordan Chin, a curious and driven MS Computer Science
+            student at Rochester Institute of Technology. I absolutely love
+            creating things—whether it’s interactive 3D visuals, intuitive user
+            interfaces, or neural network models. I’ve worked with technologies
+            like React, Node.js, and scikit-learn, and I get a kick out of
+            solving challenging problems with clean, efficient code.
+          </p>
+          <p className="text-gray-700 mb-6 leading-7">
+            What excites me most about software development is the opportunity
+            to turn ideas into impactful solutions that make people’s lives
+            easier (and maybe even a little more fun). I’m always eager to
+            learn, grow, and collaborate with like-minded people who share my
+            passion for technology and creativity.
+          </p>
+          <p className="text-gray-700 mb-6 leading-7">
+            I’m currently looking for a full-time role as a Software Engineer or
+            Full-Stack Developer. If my work resonates with you, or you just
+            want to chat about tech, let’s connect!"
+          </p>
+        </motion.div>
 
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
-      >
-        I'm a skilled software developer with experience in TypeScript and
-        JavaScript, and expertise in frameworks like React, Node.js, and
-        Three.js. I'm a quick learner and collaborate closely with clients to
-        create efficient, scalable, and user-friendly solutions that solve
-        real-world problems. Let's work together to bring your ideas to life!
-      </motion.p>
+        {/* Image Section */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+          className="md:w-1/2 mt-10 md:mt-0 flex justify-center"
+        >
+          <img
+            src={pfp}
+            alt="Jordan Chin"
+            className="w-80 h-auto rounded-lg shadow-lg object-cover"
+          />
+        </motion.div>
+      </section>
 
       <div className="mt-20 flex justify-center flex-wrap gap-10">
         {services.map((service, index) => (
