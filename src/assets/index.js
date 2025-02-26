@@ -27,13 +27,14 @@ import starbucks from "./company/starbucks.png";
 import vi from "./company/vector_infotech.png";
 import oyen from "./company/oyen.png";
 import digiraptor from "./company/digiraptor.png";
+import paychex from "./company/paychex.png";
 import jofan from "./testimonials/jofan_pic.jpeg";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 
-import resume from "./JordanChin-Res.pdf";
+import resume from "./JordanChin-Resume.pdf";
 import pfp from "./jordan_prof.jpg";
 
 export {
@@ -68,6 +69,7 @@ export {
   vi,
   digiraptor,
   jofan,
+  paychex,
   resume,
   pfp,
 };

@@ -24,6 +24,7 @@ import {
   tripguide,
   threejs,
   oyen,
+  paychex,
   vi,
   jofan,
 } from "../assets";
@@ -118,6 +119,19 @@ const technologies = [
 ];
 
 const experiences = [
+  {
+    title: "Software Engineer Intern",
+    company_name: "Paychex",
+    icon: paychex,
+    iconBg: "#E6DEDD",
+    date: "Jan 2025 - Present",
+    points: [
+      "Collaborated with a cross-functional Agile team to develop a cloud-native tax computation and payroll application, replacing the legacy COBOL-based system with modern technologies like Spring Boot and MongoDB.",
+      "Designed and implemented RESTful APIs for critical tax processing workflows, ensuring scalability and reliability through best practices in Java development.",
+      "Leveraged CI/CD pipelines with Gradle to automate build, testing, and deployment, enabling continuous delivery of application features.",
+      "Integrated Kafka and RabbitMQ to facilitate real-time communication and asynchronous processing across distributed microservices.",
+    ],
+  },
   {
     title: "Software Engineer Intern",
     company_name: "Oyen Pet Insurance",
